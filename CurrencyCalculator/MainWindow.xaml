@@ -1,0 +1,34 @@
+﻿<Window x:Class="CurrencyCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kalkulator walut" Height="470" Width="836"
+        ResizeMode="NoResize">
+    <Grid Background="#FFE7ECFF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="435*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Oblicz po:" FontSize="20" Margin="21,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold" Grid.Row="1"/>
+        <TextBlock Text="Data:" FontSize="20" Margin="66,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold" Grid.Row="1"/>
+        <ComboBox x:Name="calculatePicker" SelectionChanged="ChangeType" Width="210" Height="26" Margin="120,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" FontSize="14" FontWeight="Bold"/>
+        <TextBlock Text="Z:" FontSize="20" Margin="97,152,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold" Grid.Row="1"/>
+        <TextBlock Text="NA:" FontSize="20" Margin="80,192,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Bold" Grid.Row="1"/>
+        <ComboBox x:Name="fromPicker" SelectionChanged="SetFromLabel" Width="210" Height="26" Margin="120,152,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" FontSize="14" FontWeight="Bold"/>
+        <ComboBox x:Name="toPicker" SelectionChanged="SetToLabel" Width="210" Height="26" Margin="120,192,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="calculateButton" Content="Oblicz" Click="ButtonClick" Width="200" Height="70" Margin="122,275,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="30" FontWeight="Bold" Grid.Row="1" Background="White"/>
+
+        <DatePicker x:Name="datePicker" SelectedDateChanged="CalculateByDate" Width="210" Height="26" Margin="120,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="fromLabel" Content="PLN" Width="78" Height="46" Margin="607,101,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Grid.Row="1"/>
+        <Label x:Name="resultLabel" Height="64" Margin="506,215,60,0" VerticalAlignment="Top" FontSize="40" Content="" HorizontalContentAlignment="Center" BorderThickness="0,0,0,1" BorderBrush="Black" Grid.Row="1" FontWeight="Bold"/>
+        <Label x:Name="toLabel" Content="USD" Width="78" Height="38" Margin="607,298,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Grid.Row="1"/>
+        <Label x:Name="connectionStatusLabel" Content="Połączono" Width="168" Height="30" Margin="186,374,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="dateLabel" Width="210" Height="27" Margin="122,101,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="1" FontWeight="Bold"/>
+        <Label Content="Wprowadź wartość:" HorizontalAlignment="Left" Margin="364,48,0,0" VerticalAlignment="Top" Height="30" Width="160" FontSize="16" FontWeight="Bold" Grid.Row="1"/>
+        <Label Content="To:" HorizontalAlignment="Left" Margin="418,218,0,0" VerticalAlignment="Top" Height="55" Width="65" FontSize="36" FontWeight="Bold" Grid.Row="1"/>
+        <TextBox x:Name="dataField" Margin="529,36,75,325" FontSize="36" HorizontalContentAlignment="Center"
+         VerticalContentAlignment="Center" TextAlignment="Center" Grid.Row="1" FontWeight="Bold"/>
+    </Grid>
+</Window>
